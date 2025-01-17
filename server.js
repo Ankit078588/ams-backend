@@ -135,7 +135,7 @@ app.post('/student/mark-attendance', async (req, res) => {
         longitude
     );
 
-    if (distance > 70) {
+    if (distance > 300) {
         return res.status(400).send(`You are not inside the Classroom. Distance: ${distance}`);
     }
 
