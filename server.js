@@ -47,6 +47,8 @@ app.post('/teacher/start-attendance', async (req, res) => {
     console.log('Latitude recieved: ', latitude);
     console.log('Longitude recieved: ', longitude);
     
+    // Reset teacher coordinates:
+    activeSession = [];
 
     if (!latitude || !longitude) {
         return res.status(400).send('Latitude and longitude are required.');
